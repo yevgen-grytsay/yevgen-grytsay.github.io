@@ -40,7 +40,10 @@
         }
         .job-descr article {
             clear: both;
-            line-height: 1.3em;
+            /*line-height: 1.3em;*/
+            padding-top: 5px;
+            text-align: justify;
+            /*text-indent: 20px;*/
         }
         p {
             line-height: 1.3em;
@@ -91,6 +94,10 @@
 
         .main-descr {
             margin-top: 15px;
+            text-align: justify;
+        }
+        p {
+            margin-bottom: 1.5rem;
         }
         .skills dt {
             font-size: 1.2em;
@@ -98,7 +105,7 @@
         .skills dd {
             margin-left: 140px;
             font-size: 1.2em;
-            text-indent: 10px;
+            /*text-indent: 10px;*/
         }
         .container {
             width: 900px;
@@ -140,10 +147,15 @@
     </div>
     <div class="row">
         <div class="main-descr">
-            <p>Занимаюсь разработкой на PHP с 2013 года. В основном занимался поддержкой и развитием B2B-платформы.
-                Также самостоятельно разработал граббер для сбора цен в интернет-магазинах и агрегаторах
-                (подробности в разделе "Последние достижения").</p>
-            <p>Ищу работу в команде, сложные задачи и возможности для профессионального роста.</p>
+
+            <h4>Ожидания от работы</h4>
+            <p>Применение моих знаний и навыков для создания сложных продуктов.
+                Желательно back-end с проектированием архитектуры, распределенными вычислениями, highload;
+                могу вспомнить верстку, но не готов заниматься ею постоянно.</p>
+
+            <p>Возможность изучения и использования в работе других языков программирования и популярных фреймворков будет плюсом.
+                Хочу работать в команде (не обязательно) т.к долгое время работал один.</p>
+
         </div>
     </div>
     <div class="row">
@@ -156,88 +168,55 @@
                 </article>
             </div>
 
-            <h4>Навыки</h4>
-            <dl class="list-like skills">
-                <dt>PHP</dt>
-                <dd>
-                    <i class="fa fa-circle icon" aria-hidden="true"></i>
-                    <i class="fa fa-circle icon" aria-hidden="true"></i>
-                    <i class="fa fa-circle icon" aria-hidden="true"></i>
-                    <i class="fa fa-circle icon" aria-hidden="true"></i>
-                    <i class="fa fa-circle icon" aria-hidden="true"></i>
-                </dd>
-                <dt>OOP</dt>
-                <dd>
-                    <i class="fa fa-circle icon" aria-hidden="true"></i>
-                    <i class="fa fa-circle icon" aria-hidden="true"></i>
-                    <i class="fa fa-circle icon" aria-hidden="true"></i>
-                    <i class="fa fa-circle icon" aria-hidden="true"></i>
-                    <i class="fa fa-circle-thin icon" aria-hidden="true"></i>
-                </dd>
-                <dt>JavaScript</dt>
-                <dd>
-                    <i class="fa fa-circle icon" aria-hidden="true"></i>
-                    <i class="fa fa-circle icon" aria-hidden="true"></i>
-                    <i class="fa fa-circle icon" aria-hidden="true"></i>
-                    <i class="fa fa-circle-thin icon" aria-hidden="true"></i>
-                    <i class="fa fa-circle-thin icon" aria-hidden="true"></i>
-                </dd>
-                <dt>MySQL</dt>
-                <dd>
-                    <i class="fa fa-circle icon" aria-hidden="true"></i>
-                    <i class="fa fa-circle icon" aria-hidden="true"></i>
-                    <i class="fa fa-circle icon" aria-hidden="true"></i>
-                    <i class="fa fa-circle-thin icon" aria-hidden="true"></i>
-                    <i class="fa fa-circle-thin icon" aria-hidden="true"></i>
-                </dd>
-                <dt>Linux</dt>
-                <dd>
-                    <i class="fa fa-circle icon" aria-hidden="true"></i>
-                    <i class="fa fa-circle icon" aria-hidden="true"></i>
-                    <i class="fa fa-circle-thin icon" aria-hidden="true"></i>
-                    <i class="fa fa-circle-thin icon" aria-hidden="true"></i>
-                    <i class="fa fa-circle-thin icon" aria-hidden="true"></i>
-                </dd>
-                <dt>Git, Mercurial</dt>
-                <dd>
-                    <i class="fa fa-circle icon" aria-hidden="true"></i>
-                    <i class="fa fa-circle icon" aria-hidden="true"></i>
-                    <i class="fa fa-circle-thin icon" aria-hidden="true"></i>
-                    <i class="fa fa-circle-thin icon" aria-hidden="true"></i>
-                    <i class="fa fa-circle-thin icon" aria-hidden="true"></i>
-                </dd>
-                <dt>Python</dt>
-                <dd>
-                    <i class="fa fa-circle icon" aria-hidden="true"></i>
-                    <i class="fa fa-circle icon" aria-hidden="true"></i>
-                    <i class="fa fa-circle-thin icon" aria-hidden="true"></i>
-                    <i class="fa fa-circle-thin icon" aria-hidden="true"></i>
-                    <i class="fa fa-circle-thin icon" aria-hidden="true"></i>
-                </dd>
-                <dt>Java</dt>
-                <dd>
-                    <i class="fa fa-circle icon" aria-hidden="true"></i>
-                    <i class="fa fa-circle-thin icon" aria-hidden="true"></i>
-                    <i class="fa fa-circle-thin icon" aria-hidden="true"></i>
-                    <i class="fa fa-circle-thin icon" aria-hidden="true"></i>
-                    <i class="fa fa-circle-thin icon" aria-hidden="true"></i>
-                </dd>
-            </dl>
-
             <h4>Опыт и технологии</h4>
-            <p>Отладка и профилирование, рефакторинг, сложные SQL-запросы, юнит-тесты,
-                приемочные тесты, парсинг Web-страниц, очереди сообщений.</p>
-            <p>В повседневной разработке использую <code>Ubuntu,</code> <code>PhpStorm,</code>
-                <code>Git,</code> <code>Composer,</code>
-                <code>PHPUnit,</code> <code>Xdebug</code></p>
-            <p>В разной степени знаком с Oracle, MongoDB, RabbitMQ,
-                Codeception, Selenium WebDriver,
-                Jenkins, Ansible, supervisord, xhprof, Oracle VirtualBox, cron,
-                Yii2, Zend Framework,
-                Markdown, AsciiDoc,
-                RequireJs, MarionetteJs
-            </p>
+            <div class="job-descr">
+                <article>
+                    <p>Общий опыт работы в веб-разработке 8 лет (из них 3 года PHP-разработчиком).</p>
+                    <p>PHP, OOP, JavaScript, MySQL, Ubuntu, PhpStorm, Git, Mercurial, Composer, PHPUnit, Xdebug.</p>
+                    <p>В разной степени знаком с Python, Java,
+                        Oracle, MongoDB, RabbitMQ,
+                        Codeception, Selenium WebDriver,
+                        Jenkins, Ansible, supervisord, xhprof, Oracle VirtualBox, cron,
+                        Yii2, Zend Framework,
+                        Markdown, AsciiDoc,
+                        RequireJs, MarionetteJs
+                    </p>
+                    <p>Также имею опыт верстки (базовая) и разработки на JavaScript (native, jQuery, RequireJs, Backbone, MarionetteJs).</p>
+                    <p>В последнее время интересуюсь функциональным программированием, а также языками Java и Go.</p>
+                </article>
+            </div>
 
+            <h4>Языки</h4>
+            <ul>
+                <li>English - чтение технической документации и профессиональной литературы</li>
+            </ul>
+        </div>
+        <div class="six columns">
+            <!-- Experience
+            --------------------------------------------  -->
+            <h4>Опыт работы</h4>
+            <div class="job-descr">
+                <header><em>PHP-разработчик</em><br>MTI</header>
+                <aside>июнь 2013 – декабрь 2014<br>апрель 2015 – август 2016</aside>
+                <article>
+                    <p>Поддержка и развитие самописной CRM-системы для B2B:
+                        управление товарами и заказами (мультивалютность, партионность, многоскладовость),
+                        интеграция с учетной системой, API для обмена с клиентами, очереди задач и др.</p>
+
+                    <p>Самостоятельно поддерживал работу системы, поэтому выполнял весь спектр работ.
+                        Анализ требований и проектирование модулей, отладка и профилирование, юнит-тесты,
+                        рефакторинг и редизайн кода, сложные SQL-запросы, веб-скрапинг, очереди сообщений.</p>
+
+                    <p>Поддержка и развитие порталов розничной продажи intertop.ua, protoria.ua, shop.lenovo.ua.</p>
+                </article>
+            </div>
+
+            <div class="job-descr">
+                <header><em>Программист</em><br>Компания Эффект</header>
+                <aside>август 2008 – февраль 2011<br>июнь 2011 – май 2013</aside>
+                <article><p>Верстка (HTML, CSS), разработка различных скриптов на JavaScript (сложные формы, галереи и т.п.),
+                    настройка Unix-хостинга</p></article>
+            </div>
 
             <h4>Профили</h4>
             <dl class="list-like">
@@ -247,50 +226,6 @@
                 <dt><i class="fa fa-linkedin icon" aria-hidden="true"></i></dt>
                 <dd>ua.linkedin.com/in/yevgengrytsay</dd>
             </dl>
-        </div>
-        <div class="six columns">
-            <!-- Experience
-            --------------------------------------------  -->
-            <h4>Опыт работы</h4>
-            <div class="job-descr">
-                <header><em>PHP-разработчик</em><br>MTI</header>
-                <aside>апрель 2015 – август 2016</aside>
-                <article>
-                    <p>Поддержка и развитие B2B-платформы (CRM и клиентская часть).
-                        Разработка внутреннего проекта, связанного с веб-скрапингом.</p>
-                </article>
-            </div>
-
-            <div class="job-descr">
-                <header><em>Web Developer</em><br>Фриланс</header>
-                <aside>февраль 2015 – март&nbsp;2015</aside>
-                <article><p>Разработка интерфейса для создания слайд-шоу.</p></article>
-            </div>
-
-            <div class="job-descr">
-                <header><em>PHP-разработчик</em><br>MTI</header>
-                <aside>июнь 2013 – декабрь 2014</aside>
-                <article>Поддержка и развитие B2B-платформы (CRM и клиентская часть).
-                    Поддержка и развитие порталов розничной продажи intertop.ua, protoria.ua, shop.lenovo.ua</article>
-            </div>
-
-            <div class="job-descr">
-                <header><em>Программист</em><br>Компания Эффект</header>
-                <aside>август 2008 – февраль 2011<br>июнь 2011 – май 2013</aside>
-                <article>Верстка (HTML, CSS), разработка различных скриптов на JavaScript (галереи и т.п.), настройка Unix-хостинга</article>
-            </div>
-
-
-            <h4>Последние достижения</h4>
-            <p>Разработал граббер для сбора цен в интернет-магазинах и агрегаторах.
-                В частности, реализовал следующее:</p>
-            <ul>
-                <li>рендер страниц на Selenium Web Driver</li>
-                <li>граббер на сопрограммах для простых страниц (Guzzle, non-blocking i\o)</li>
-                <li>балансировщик для распределения запросов между прокси-серверами (Python, Twisted)</li>
-                <li>плагин Firefox для решения капчи</li>
-                <li>веб-интерфейс для просмотра отчетов (Yii2, MySql, MongoDb)</li>
-            </ul>
         </div>
     </div>
     <footer>&nbsp;</footer>
