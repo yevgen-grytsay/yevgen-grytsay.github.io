@@ -16,7 +16,7 @@
 
     <style>
         body {
-            font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
+            font-size: 1.7em; /* currently ems cause chrome bug misinterpreting rems on body element */
             line-height: 1.6;
             font-weight: 400;
             font-family: "Open Sans", "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -42,7 +42,6 @@
             clear: both;
             /*line-height: 1.3em;*/
             padding-top: 5px;
-            text-align: justify;
             /*text-indent: 20px;*/
         }
         p {
@@ -110,6 +109,9 @@
         .container {
             width: 900px;
         }
+        .lead {
+            font-size: 1.1em;
+        }
     </style>
 </head>
 <body>
@@ -134,10 +136,10 @@
             <div class="contacts">
                 <dl class="list-like">
                     <dt><i class="fa fa-envelope-o icon" aria-hidden="true"></i></dt>
-                    <dd>yevgen_grytsay@mail.ru</dd>
+                    <dd>yevgen.grytsay@gmail.com</dd>
 
                     <dt><i class="fa fa-phone icon" aria-hidden="true"></i></dt>
-                    <dd>(097)752-53-35</dd>
+                    <dd>(097) 752-53-35</dd>
 
                     <dt><i class="fa fa-map-marker icon" aria-hidden="true"></i></dt>
                     <dd>г. Киев</dd>
@@ -149,41 +151,30 @@
         <div class="main-descr">
 
             <h4>Ожидания от работы</h4>
-            <p>Применение моих знаний и навыков для создания сложных продуктов (back-end).
-                Могу вспомнить верстку, но не готов заниматься ею постоянно.
-                Было бы интересно получить опыт работы с высокими нагрузками, распределенными вычислениями.</p>
-
-
-            <p>Возможность изучения и использования в работе других языков программирования и популярных фреймворков будет плюсом.
-                Хочу работать в команде (не обязательно) т.к долгое время работал один.</p>
+            <p>Преимущественно backend, профессиональный рост, минимум legacy, адекватная команда.</p>
 
         </div>
     </div>
     <div class="row">
         <div class="six columns">
+
+            <h4>Технологии</h4>
+            <div class="job-descr">
+                <article>
+                    <p class="lead"><strong>PHP, OOP, JavaScript, MySQL, Ubuntu, PhpStorm, Git.</strong></p>
+                    <p>Также в разной степени знаком с Python, Java,
+                        supervisord, cron, xhprof,
+                        Composer, PHPUnit, Xdebug,
+                        Yii2, Selenium WebDriver, Webpack
+                    </p>
+                </article>
+            </div>
+
             <h4>Образование</h4>
             <div class="job-descr">
                 <header><em>Национальный авиационный университет</em> (2005 – 2010)</header>
                 <article>
-                    <p>Факультет компьютерных систем, Компьютерные системы и сети.<br>Магистр.</p>
-                </article>
-            </div>
-
-            <h4>Опыт и технологии</h4>
-            <div class="job-descr">
-                <article>
-                    <p>Общий опыт работы в веб-разработке 8 лет (из них 3 года PHP-разработчиком).</p>
-                    <p>PHP, OOP, JavaScript, MySQL, Ubuntu, PhpStorm, Git, Mercurial, Composer, PHPUnit, Xdebug.</p>
-                    <p>В разной степени знаком с Python, Java,
-                        Oracle, MongoDB, RabbitMQ,
-                        Codeception, Selenium WebDriver,
-                        Jenkins, Ansible, supervisord, xhprof, Oracle VirtualBox, cron,
-                        Yii2, Zend Framework,
-                        Markdown, AsciiDoc,
-                        RequireJs, MarionetteJs
-                    </p>
-                    <p>Также имею опыт верстки (базовая) и разработки на JavaScript (native, jQuery, RequireJs, Backbone, MarionetteJs).</p>
-                    <p>В последнее время интересуюсь функциональным программированием, а также языками Java и Go.</p>
+                    <p>Факультет компьютерных систем, Компьютерные системы и сети. Магистр.</p>
                 </article>
             </div>
 
@@ -191,11 +182,32 @@
             <ul>
                 <li>English - чтение технической документации и профессиональной литературы</li>
             </ul>
+
+            <h4>Профили</h4>
+            <dl class="list-like">
+                <dt><i class="fa fa-github icon" aria-hidden="true"></i></dt>
+                <dd>github.com/yevgen-grytsay</dd>
+
+                <dt><i class="fa fa-linkedin icon" aria-hidden="true"></i></dt>
+                <dd>ua.linkedin.com/in/yevgengrytsay</dd>
+            </dl>
         </div>
         <div class="six columns">
             <!-- Experience
             --------------------------------------------  -->
             <h4>Опыт работы</h4>
+            <p>Разработкой на PHP занимаюсь 4 года (общий опыт работы в веб-разработке &mdash; 8 лет).</p>
+
+            <div class="job-descr">
+                <header><em>PHP-разработчик</em><br>VicMan</header>
+                <aside>с февраля 2017</aside>
+                <article>
+                    <p>Поддержка проектов linkis.com (брендинг ссылок) и
+                        convey.pro (сервис автоматического постинга твитов).
+                        Участвую в разработке photolab.me (веб-интерфейс для процессора фотоэффектов).</p>
+                </article>
+            </div>
+
             <div class="job-descr">
                 <header><em>PHP-разработчик</em><br>MTI</header>
                 <aside>июнь 2013 – декабрь 2014<br>апрель 2015 – август 2016</aside>
@@ -213,18 +225,9 @@
             <div class="job-descr">
                 <header><em>Программист</em><br>Компания Эффект</header>
                 <aside>август 2008 – февраль 2011<br>июнь 2011 – май 2013</aside>
-                <article><p>Верстка (HTML, CSS), разработка различных скриптов на JavaScript (сложные формы, галереи и т.п.),
+                <article><p>Верстка (HTML, CSS), разработка различных скриптов на JavaScript (формы, галереи и т.п.),
                     настройка Unix-хостинга</p></article>
             </div>
-
-            <h4>Профили</h4>
-            <dl class="list-like">
-                <dt><i class="fa fa-github icon" aria-hidden="true"></i></dt>
-                <dd>github.com/yevgen-grytsay</dd>
-
-                <dt><i class="fa fa-linkedin icon" aria-hidden="true"></i></dt>
-                <dd>ua.linkedin.com/in/yevgengrytsay</dd>
-            </dl>
         </div>
     </div>
     <footer>&nbsp;</footer>
