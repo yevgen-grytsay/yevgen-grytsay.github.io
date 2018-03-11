@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="../normalize.css">
     <link rel="stylesheet" href="../skeleton.css">
 
-    <script src="https://use.fontawesome.com/c7d21521a7.js"></script>
+    <!--<script src="https://use.fontawesome.com/c7d21521a7.js"></script>-->
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
 
     <style>
         body {
@@ -21,32 +22,29 @@
             font-weight: 400;
             font-family: "Open Sans", "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
             color: #222; }
-        .job-descr {
+        section {
             margin-bottom: 28px;
         }
-        .job-descr header {
+        section header {
             content: "";
             display: table;
             clear: both;
             float: left;
             font-weight: bold;
         }
-        .job-descr header em {
+        section header em {
             font-style: normal;
         }
-        .job-descr aside {
+
+        section aside {
             float: right;
         }
-        .job-descr article {
+        section article {
             clear: both;
             padding-top: 5px;
         }
         p {
             line-height: 1.3em;
-        }
-        .icon {
-            color: #ff5252;
-            font-size: 24px;
         }
         .main-header .title {
             font-size: 24px;
@@ -61,6 +59,7 @@
         }
         h4 {
             border-bottom: 2px solid #ff5252;
+            margin-bottom: 1.5rem;
         }
         dl.list-like dt {
             display: block;
@@ -69,7 +68,7 @@
         }
         dl.list-like dd {
             display: block;
-            margin-bottom: 5px;
+            margin: 0 0 5px 30px;
         }
         p {
             margin-bottom: 1.5rem;
@@ -87,6 +86,32 @@
         .content-table {
             table-layout: fixed;
         }
+        .job-item {
+            padding-left: 10px;
+            border-bottom: 2px solid #dedede;
+        }
+        .job-item header {
+            font-weight: normal;
+            font-size: 1.2em;
+        }
+        .job-item header a {
+            color: #222;
+        }
+
+        .job-item article {
+            padding-top: 1rem;
+            padding-left: 10px;
+        }
+        em {
+            font-weight: bold;
+        }
+        a.external {
+            color: #c33a3a;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -101,98 +126,84 @@
 </div>
 <table cellpadding="0" cellspacing="0" border="0" width="900" class="content-table" align="center">
     <colgroup>
-        <col width="432">
-        <col width="36">
-        <col width="432">
+        <col width="553">
+        <col width="15">
+        <col width="332">
     </colgroup>
     <tr>
         <td>
 
-            <h4>Технологии</h4>
-            <div class="job-descr">
+            <h4>Опыт работы</h4>
+
+            <section class="job-item">
+                <header><em>PHP-разработчик</em><br><a class="external" target="_blank" href="http://www.vicman.net/">VicMan <i class="fas fa-external-link-alt fa-xs"></i></a>, 8 месяцев</header>
                 <article>
-                    <p class="lead"><strong>PHP, OOP, MySQL, JavaScript, Linux, Git</strong></p>
-                    <p>Также в разной степени знаком с Python, Java,
-                        supervisord, cron, xhprof,
-                        Composer, PHPUnit, Xdebug,
-                        Yii2, Selenium WebDriver, Webpack
-                    </p>
+                    <p>Принимал участие в разработке <a class="external" target="_blank" href="https://photolab.me">photolab.me <i class="fas fa-external-link-alt fa-xs"></i></a> (веб-интерфейс для процессора фотоэффектов).</p>
+                    <p>Занимался поддержкой проектов <a class="external" target="_blank" href="https://linkis.com">linkis.com <i class="fas fa-external-link-alt fa-xs"></i></a> (брендинг ссылок) и
+                        <a class="external" target="_blank" href="https://convey.pro">convey.pro <i class="fas fa-external-link-alt fa-xs"></i></a> (сервис автоматического постинга твитов).</p>
                 </article>
-            </div>
+            </section>
 
-            <h4>Образование</h4>
-            <div class="job-descr">
-                <header><em>Национальный авиационный университет</em> (2005&nbsp;–&nbsp;2010)</header>
+            <section class="job-item">
+                <header><em>PHP-разработчик</em>
+                    <br><a class="external" target="_blank" href="http://mti.ua">MTI <i class="fas fa-external-link-alt fa-xs"></i></a>,
+                    3 года</header>
                 <article>
-                    <p>Факультет компьютерных систем, Компьютерные системы и сети. Магистр.</p>
+                    <p>Разработал небольшой проект на Yii2 для внутреннего использования.</p>
+                    <p>Разработал распределенный веб-скрапер.</p>
+                    <p>Занимался поддержкой и доработкой CRM-системы для B2B (<a class="external" href="https://www.distri.mti.ua/">www.distri.mti.ua <i class="fas fa-external-link-alt fa-xs"></i></a>). </p>
                 </article>
-            </div>
+            </section>
 
-            <h4>Языки</h4>
-            <p>English - чтение технической документации и профессиональной литературы</p>
-
-            <h4>Хобби и увлечения</h4>
-            <div class="job-descr">
+            <section class="job-item">
+                <header><em>Веб-программист</em>
+                    <br><a class="external" target="_blank" href="http://effect.com.ua/">Компания Эффект <i class="fas fa-external-link-alt fa-xs"></i></a>
+                    , 5 лет</header>
                 <article>
-                    <p>В разное время моими увлечениями были music production, футбол, флорбол,
-                        здоровое питание, электрогитара,
-                        капоейра, самообразование, кофе,
-                        даже пытался писать статьи.</p>
+                    <p>Занимался версткой, техподдержкой, настройкой хостинга.</p>
+                    <p>Разработал инструмент для автоматизированной генерации CSS на основании PSD-макета,
+                        что позволило ускорить и упростить создание шаблонных сайтов.</p>
+                    <p>Разработал на JavaScript несколько галерей, которые впоследствии стали популярными у заказчиков.</p>
                 </article>
-            </div>
-
-            <h4>Профили</h4>
-            <dl class="list-like">
-                <dt><i class="fa fa-github icon" aria-hidden="true"></i></dt>
-                <dd><a href="https://github.com/yevgen-grytsay" target="_blank">github.com/yevgen-grytsay</a></dd>
-
-                <dt><i class="fa fa-linkedin icon" aria-hidden="true"></i></dt>
-                <dd><a href="https://ua.linkedin.com/in/yevgengrytsay" target="_blank">ua.linkedin.com/in/yevgengrytsay</a></dd>
-            </dl>
+            </section>
 
         </td>
         <td></td>
         <td>
 
-            <h4>Опыт работы</h4>
-
-            <div class="job-descr">
-                <header><em>PHP-разработчик</em>, VicMan, с февраля 2017</header>
+            <h4>Технологии</h4>
+            <section>
                 <article>
-                    <p>Поддержка проектов linkis.com (брендинг ссылок) и
-                        convey.pro (сервис автоматического постинга твитов).
-                        Участвую в разработке photolab.me (веб-интерфейс для процессора фотоэффектов).</p>
+                    <p class="lead"><strong>PHP, OOP, MySQL, JavaScript, Linux, Git</strong></p>
                 </article>
-            </div>
+            </section>
 
-            <div class="job-descr">
-                <header><em>PHP-разработчик</em>, MTI, 3 года</header>
+            <h4>Образование</h4>
+            <section>
+                <header><em>Национальный авиационный университет</em> (2005&nbsp;–&nbsp;2010)</header>
                 <article>
-                    <p>Разработал с нуля небольшой проект на Yii2 для внутреннего использования.</p>
-                    <p>Разработал веб-скрапер для сбора ценной для бизнеса информации.
-                        В частности, реализовал:</p>
-                    <ul>
-                        <li>парсеры веб-страниц (в т.ч. парсеры, использующие Selenium WebDriver)</li>
-                        <li>балансировщик, написанный на фреймворке Twisted (Python), для распределения запросов
-                            между прокси-серверами и автоматического исключения забаненных прокси</li>
-                        <li>плагин для Firefox для ручного решения капчи и удаления прокси из списка забаненных</li>
-                    </ul>
-
-                    <p>Самостоятельно поддерживал CRM-систему для B2B. Выполнял широкий спектр работ:
-                        анализ требований, проектирование и разработка модулей, отладка и профилирование,
-                        юнит-тесты, рефакторинг, разработка API, поддержка пользователей.</p>
+                    <p>Факультет компьютерных систем, Компьютерные системы и сети. Магистр.</p>
                 </article>
-            </div>
+            </section>
 
-            <div class="job-descr">
-                <header><em>Веб-программист</em>, Компания Эффект, 5 лет</header>
+            <h4>Языки</h4>
+            <p>English - чтение технической документации и профессиональной литературы</p>
+
+            <h4>Хобби и увлечения</h4>
+            <section>
                 <article>
-                    <p>Разработал инструмент для автоматизированной генерации CSS на основании PSD-макета,
-                        что позволило ускорить и упростить создание шаблонных сайтов.</p>
-                    <p>Разработал на JavaScript несколько галерей, впоследствии ставших популярными среди клиентов.</p>
-                    <p>Занимался версткой, техподдержкой, настройкой хостинга.</p>
+                    <p>Флорбол, авиасимуляторы</p>
                 </article>
-            </div>
+            </section>
+
+            <h4>Профили</h4>
+            <dl class="list-like">
+                <dt><i class="fab fa-github fa-lg" aria-hidden="true"></i></dt>
+                <dd><a class="external" href="https://github.com/yevgen-grytsay" target="_blank">github.com/yevgen-grytsay&nbsp;<i class="fas fa-external-link-alt fa-xs"></i></a></dd>
+
+                <dt><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></dt>
+                <dd><a class="external" href="https://ua.linkedin.com/in/yevgengrytsay" target="_blank">ua.linkedin.com/in/yevgengrytsay&nbsp;<i class="fas fa-external-link-alt fa-xs"></i></a></dd>
+            </dl>
 
         </td>
     </tr>
