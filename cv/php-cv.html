@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Евгений Грицай, PHP-разработчик</title>
     <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
 
     <!-- CSS
@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="../normalize.css">
     <link rel="stylesheet" href="../skeleton.css">
 
-    <!--<script src="https://use.fontawesome.com/c7d21521a7.js"></script>-->
     <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
 
     <style>
@@ -35,7 +34,6 @@
         section header em {
             font-style: normal;
         }
-
         section aside {
             float: right;
         }
@@ -76,12 +74,12 @@
         .lead {
             font-size: 1.1em;
         }
-		li {
-			margin-left: 10px;
-		}
+        li {
+            margin-left: 10px;
+        }
         .content-table td {
             vertical-align: top;
-			border-width: 0;
+			      border-width: 0;
         }
         .content-table {
             table-layout: fixed;
@@ -89,6 +87,9 @@
         .job-item {
             padding-left: 10px;
             border-bottom: 2px solid #dedede;
+        }
+        .job-item:last-child {
+            border-bottom-width: 0;
         }
         .job-item header {
             font-weight: normal;
@@ -112,6 +113,17 @@
         a:hover {
             text-decoration: underline;
         }
+        div.section {
+            width: 900px;
+            margin: 20px auto 0;
+        }
+        div.tag {
+            float: left;
+            padding: 5px;
+            margin: 5px;
+            border: 1px solid #555555;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
@@ -124,6 +136,14 @@
         <br><span class="fade">(097) 752-53-35</span>
     </div>
 </div>
+
+<div class="section">
+    <section>
+        Ищу работу на full-time, в офис или удаленно, преимущественно back-end. Желательно продуктовая компания.
+        Было бы интересно поработать с Symfony, Doctrine, DDD, Highload, Go, ReactJs.
+    </section>
+</div>
+
 <table cellpadding="0" cellspacing="0" border="0" width="900" class="content-table" align="center">
     <colgroup>
         <col width="553">
@@ -183,7 +203,7 @@
             <section>
                 <article>
                     <p class="lead"><strong>PHP, OOP, MySQL, Linux, Git</strong></p>
-                    <p>В разной степени знаком с ZF1, Yii2, Docker, Codeception, PHPUnit, JavaScript, Java, Rust.</p>
+                    <p>В разной степени знаком с ZF1, Yii2, Codeception, PHPUnit, Docker, RabbitMQ, JavaScript, Java, Rust.</p>
                     <p>Не боюсь front-end (Vanilla JavaScript, React, Vue).</p>
                 </article>
             </section>
