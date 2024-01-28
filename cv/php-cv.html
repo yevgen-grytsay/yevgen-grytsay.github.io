@@ -72,13 +72,17 @@
             margin: 0 0 5px 30px;
         }
         p {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.0rem;
         }
         .lead {
             font-size: 1.1em;
         }
+        ul {
+            margin: 8px 0 10px 10px;
+        }
         li {
-            margin-left: 10px;
+            line-height: 1.3em;
+            /*margin-left: 10px;*/
         }
         .content-table td {
             vertical-align: top;
@@ -115,6 +119,10 @@
         }
         a:hover {
             text-decoration: underline;
+        }
+        .project-name {
+            font-weight: bold;
+            color: #c33a3a;
         }
         div.section {
             width: 900px;
@@ -169,8 +177,12 @@
                     <br>2021 – 2023 <small>(2 роки 3 місяці)</small>
                 </header>
                 <article>
-                    <p>Backend-розробник у крос-функційній команді iOS-додатку Zodianic (астрологія, наразі додаток неактивний).</p>
-                    <p>Розробник у backend-команді мобільного додатку <a class="external" target="_blank" href="https://hily.com/">Hily <i class="fas fa-external-link-alt fa-xs"></i></a> (dating). Переписував модуль проєкту з легасі-коду.</p>
+                    <p><a class="external project-name" target="_blank" href="https://hily.com/">Hily <i class="fas fa-external-link-alt fa-xs"></i></a> (мобільний додаток; dating). Розробник у backend-команді.</p>
+                    <ul>
+                        <li>Переносив логіку, що відповідає за показ пейволів, з легасі-коду в окремий модуль з дотриманням принципів SOLID.</li>
+                    </ul>
+
+                    <p><span class="project-name">Zodianic</span> (iOS-додаток; астрологія; наразі додаток неактивний). Backend-розробник у міжфункційній команді.</p>
 <!--                    <p>Розробка нового функціоналу... Крос-функційна команда Zodianic (iOS, App Store In-App purchases, App Store Server Notifications).</p>-->
 <!--                    <p>~~~~~~ API (iOS, Android), App Store In-App purchases, Підтримка одного з модулів системи проекту <a class="external" target="_blank" href="https://hily.com/">Hily <i class="fas fa-external-link-alt fa-xs"></i></a>.</p>-->
                 </article>
@@ -179,12 +191,18 @@
             <section class="job-item">
                 <header>
 <!--                    <em>PHP-розробник</em>-->
-                    <a class="external" target="_blank" href="https://www.airslate.com/"><em>airSlate</em> <i class="fas fa-external-link-alt fa-xs"></i></a>
+                    <a class="external project-name" target="_blank" href="https://www.airslate.com/"><em>airSlate</em> <i class="fas fa-external-link-alt fa-xs"></i></a>
                     <br>2018 – 2020 <small>(1 рік 8 місяців)</small>
                 </header>
                 <article>
-                    <p>Розробник у backend-команді проєкту <a class="external" target="_blank" href="https://www.signnow.com/">signnow.com <i class="fas fa-external-link-alt fa-xs"></i></a> (електронне підписання PDF-документів).
-                        Брав участь в перенесенні функціонала з легасі-проекта на нову платформу на Laravel.</p>
+                    <p><a class="external project-name" target="_blank" href="https://www.signnow.com/">signnow.com <i
+                            class="fas fa-external-link-alt fa-xs"></i></a> (електронне підписання PDF-документів).
+                        Розробник у backend-команді.
+                    </p>
+                    <ul>
+                        <li>Брав участь в перенесенні функціонала з легасі-проекта (моноліт) в окремий сервіс на Laravel. З дотриманням принципів SOLID і покриттям тестами.</li>
+<!--                        <li>Розробляв інструмент дебагу і пошуку аномалій.</li>-->
+                    </ul>
                 </article>
             </section>
 
@@ -195,9 +213,9 @@
                     <br>2017 <small>(11 місяців)</small>
                 </header>
                 <article>
-                    <p>Займався підтримкою проєктів <a class="external" target="_blank" href="http://linkis.com">linkis.com<i class="fas fa-external-link-alt fa-xs"></i></a> (брендинг посилань для користувачів Twitter) і
-                        <a class="external" target="_blank" href="http://convey.pro">convey.pro <i class="fas fa-external-link-alt fa-xs"></i></a> (сервіс автоматичної публікації твітів).</p>
-                    <p>Брав участь в розробці вебінтерфейсу для процесора фотоефектів <a class="external" target="_blank" href="https://photolab.me">photolab.me <i class="fas fa-external-link-alt fa-xs"></i></a>.</p>
+                    <p>Займався підтримкою проєктів <a class="external project-name" target="_blank" href="http://linkis.com">linkis.com<i class="fas fa-external-link-alt fa-xs"></i></a> (брендинг посилань для користувачів Twitter) і
+                        <a class="external project-name" target="_blank" href="http://convey.pro">convey.pro <i class="fas fa-external-link-alt fa-xs"></i></a> (сервіс автоматичної публікації твітів).</p>
+                    <p>Брав участь в розробці вебінтерфейсу для процесора фотоефектів <a class="external project-name" target="_blank" href="https://photolab.me">photolab.me <i class="fas fa-external-link-alt fa-xs"></i></a>.</p>
                 </article>
             </section>
 
@@ -208,8 +226,16 @@
                     <br>2013 – 2016 <small>(3 роки)</small>
                     </header>
                 <article>
-                    <p>Підтримка, розробка нового функціоналу та автоматизація процесів для <a class="external" target="_blank" href="https://www.distri.mti.ua/">distri.mti.ua <i class="fas fa-external-link-alt fa-xs"></i></a> (CRM-система і B2B-портал)
-                        та <a class="external" target="_blank" href="https://intertop.ua">intertop.ua <i class="fas fa-external-link-alt fa-xs"></i></a> (магазин, роздрібна торгівля).
+                    <p><a class="external project-name" target="_blank" href="https://www.distri.mti.ua/">distri.mti.ua <i class="fas fa-external-link-alt fa-xs"></i></a> (CRM-система і B2B-портал). Розробник в бекенд-команді.</p>
+                    <!--<ul>
+                        <li>Додавав у проєкт підтримку кількох валют.</li>
+                        <li>Платформа для тестування (unit, acceptance).</li>
+                        <li>Рефакторинг, багфікс, створення нових інтерфейсів</li>
+                        <li>Створював нові ендпоінти API для клієнтів.</li>
+                        <li>Підключали composer (раніше проект працював без нього).</li>
+                    </ul>-->
+                    <p>Підтримка, розробка нового функціоналу та автоматизація процесів для
+                        та <a class="external project-name" target="_blank" href="https://intertop.ua">intertop.ua <i class="fas fa-external-link-alt fa-xs"></i></a> (магазин, роздрібна торгівля).
                 </article>
             </section>
 
