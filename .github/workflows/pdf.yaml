@@ -10,7 +10,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Render DevOps CV
-        uses: frnode/html-to-pdf-action@master
+        uses: LukaszLapaj/html-to-pdf-action@master
         with:
           htmlFile: ./cv/devops-cv.html
           outputFile: ./build/devops-cv.pdf
@@ -18,7 +18,7 @@ jobs:
 
 
       - name: Render PHP CV
-        uses: frnode/html-to-pdf-action@master
+        uses: LukaszLapaj/html-to-pdf-action@master
         with:
           htmlFile: ./cv/php-cv.html
           outputFile: ./build/php-cv.pdf
@@ -31,3 +31,4 @@ jobs:
             ./build/devops-cv.pdf
             ./build/php-cv.pdf
           retention-days: 5
+          overwrite: true
