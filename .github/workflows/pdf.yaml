@@ -1,0 +1,33 @@
+name: PDF CI
+
+on: [push]
+
+jobs:
+  pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Render DevOps CV
+        uses: frnode/html-to-pdf-action@master
+        with:
+          htmlFile: ./cv/devops-cv.html
+          outputFile: ./build/devops-cv.pdf
+          pdfOptions: '{"format": "A4", "margin": {"top": "10mm", "left": "10mm", "right": "10mm", "bottom": "10mm"}}'
+
+
+      - name: Render PHP CV
+        uses: frnode/html-to-pdf-action@master
+        with:
+          htmlFile: ./cv/php-cv.html
+          outputFile: ./build/php-cv.pdf
+          pdfOptions: '{"format": "A4", "margin": {"top": "10mm", "left": "10mm", "right": "10mm", "bottom": "10mm"}}'
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: CV PDFs
+          path: |
+            ./build/devops-cv.pdf
+            ./build/php-cv.pdf
+          retention-days: 5
