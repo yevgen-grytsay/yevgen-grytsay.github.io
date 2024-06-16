@@ -9,26 +9,26 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Render DevOps CV
+      - name: Render DevOps Resume
         uses: LukaszLapaj/html-to-pdf-action@master
         with:
-          htmlFile: ./cv/devops-cv.html
-          outputFile: ./build/devops-cv.pdf
+          htmlFile: ./cv/devops-resume.html
+          outputFile: ./build/devops-resume.pdf
           pdfOptions: '{"format": "A4", "margin": {"top": "10mm", "left": "10mm", "right": "10mm", "bottom": "10mm"}}'
 
 
-      - name: Render PHP CV
+      - name: Render PHP Resume
         uses: LukaszLapaj/html-to-pdf-action@master
         with:
-          htmlFile: ./cv/php-cv.html
-          outputFile: ./build/php-cv.pdf
+          htmlFile: ./cv/php-resume.html
+          outputFile: ./build/php-resume.pdf
           pdfOptions: '{"format": "A4", "margin": {"top": "10mm", "left": "10mm", "right": "10mm", "bottom": "10mm"}}'
 
       - uses: actions/upload-artifact@v4
         with:
-          name: CV PDFs
+          name: PDF files
           path: |
-            ./build/devops-cv.pdf
-            ./build/php-cv.pdf
+            ./build/devops-resume.pdf
+            ./build/php-resume.pdf
           retention-days: 5
           overwrite: true

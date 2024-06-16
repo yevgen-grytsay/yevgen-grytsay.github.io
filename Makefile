@@ -2,17 +2,17 @@
 dir:
 	mkdir -p ./build
 
-build-devops-cv: dir
+build-devops-resume: dir
 	wkhtmltopdf \
 		--enable-local-file-access \
-		./cv/devops-cv.html ./build/devops-cv.pdf
+		./cv/devops-resume.html ./build/devops-resume.pdf
 
-build-php-cv: dir
+build-php-resume: dir
 	wkhtmltopdf \
 		--enable-local-file-access \
-		./cv/php-cv.html ./build/php-cv.pdf
+		./cv/php-resume.html ./build/php-resume.pdf
 
-build: build-devops-cv build-php-cv
+build: build-devops-resume build-php-resume
 
 clean:
-	rm ./build/devops-cv.pdf ./build/php-cv.pdf
+	rm ./build/devops-resume.pdf ./build/php-resume.pdf
