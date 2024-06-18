@@ -1,7 +1,8 @@
 ## Development
 * [The Twelve-Factor App](https://12factor.net/)
-* [A Byte of Coding. Programming Newsletter](https://abyteofcoding.alexzdanov.com/)
+* [High Performance Browser Networking](https://hpbn.co/)
 * [Building Secure and Reliable Systems](https://google.github.io/building-secure-and-reliable-systems/raw/toc.html)
+* [A Byte of Coding. Programming Newsletter](https://abyteofcoding.alexzdanov.com/)
 
 ## PHP
 * [PHP: The Right Way](https://phptherightway.com/)
