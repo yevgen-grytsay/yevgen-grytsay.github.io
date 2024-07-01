@@ -3,6 +3,7 @@
 * [High Performance Browser Networking](https://hpbn.co/)
 * [Building Secure and Reliable Systems](https://google.github.io/building-secure-and-reliable-systems/raw/toc.html)
 * [A Byte of Coding. Programming Newsletter](https://abyteofcoding.alexzdanov.com/)
+* [Choose Boring Technology](https://mcfunley.com/choose-boring-technology)
 
 ## PHP
 * [PHP: The Right Way](https://phptherightway.com/)
