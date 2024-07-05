@@ -21,7 +21,9 @@
 ## Security
 
 - [OWASP Top Ten](https://owasp.org/www-project-top-ten/)
+- [OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/)
 - [Gitleaks](https://github.com/gitleaks/gitleaks) - SAST tool for detecting and preventing hardcoded secrets like passwords, api keys, and tokens in git repos
+- [Kubernetes CIS Benchmark](https://www.cisecurity.org/benchmark/kubernetes)
 
 ## Kubernetes
 
