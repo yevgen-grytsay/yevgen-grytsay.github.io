@@ -14,6 +14,10 @@
 - [stitcher.io](https://stitcher.io/)
 - [Awesome PHP](https://github.com/ziadoz/awesome-php)
 
+## Administration
+
+- [Nginx Admin's Handbook](https://github.com/trimstray/nginx-admins-handbook)
+
 ## Security
 
 - [OWASP Top Ten](https://owasp.org/www-project-top-ten/)
