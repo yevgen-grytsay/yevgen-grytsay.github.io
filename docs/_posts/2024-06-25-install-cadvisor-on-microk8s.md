@@ -1,20 +1,24 @@
 ---
 layout: post
-title:  "Встановлення cAdvisor на MicroK8s (Draft)"
+title: "Встановлення cAdvisor на MicroK8s (Draft)"
+date: 2024-06-25 21:30:50 +0300
+categories: cadvisor kubernetes microk8s
 ---
 
-
 ## Проблема
+
 Встановив cAdvisor на MicroK8s і побачив, що метрики на виході не мають таких лейбл, які допомогли б людині ідентифікувати под,
 а також жодних лейблів, які б вказували на контейнер
 
 Наприклад, якщо подивитися через ендпоінт для Prometheus (у мене це `http://127.0.0.1:8080/metrics`), то метрика має тільки одну лейблу - `id`.
 Ось так виглядає, наприклад, метрика `container_last_seen` якогось контейнера з поду `loki-gateway`.
+
 ```
 container_last_seen{id="/kubepods/besteffort/pod2712445f-3f3f-4617-8488-48cc3b7e14d4/d52592cd61d1d3eb0950527c0e9bc3108d50167674a39d1150487171bd743132"} 1.719322452e+09 1719322452970
 ```
 
 Це UID поду, який можна дістати, наприклад, з метаданих маніфесту:
+
 ```shell
 $ kubectl get pods loki-gateway-66c8f46897-2m445 -o jsonpath='{.metadata.uid}'
 2712445f-3f3f-4617-8488-48cc3b7e14d4
@@ -23,7 +27,8 @@ $ kubectl get pods loki-gateway-66c8f46897-2m445 -o jsonpath='{.metadata.uid}'
 Можна ідентифікувати под, але по-перше, не дуже зручно для людини, по-друге, ми не можемо ідентифікувати контейнер. До того ж,
 в документації cAdvisor заявлено, що він має додавати лейбли з іменами поду, контейнера і неймспейса,
 і це явно вказано опціями `store_container_labels` і `whitelisted_container_labels`,
-значення по-замовчуванню для яких я наводжу нижче: 
+значення по-замовчуванню для яких я наводжу нижче:
+
 ```
 --store_container_labels=false
 --whitelisted_container_labels=io.kubernetes.container.name, io.kubernetes.pod.name,io.kubernetes.pod.namespace
@@ -34,6 +39,7 @@ $ kubectl get pods loki-gateway-66c8f46897-2m445 -o jsonpath='{.metadata.uid}'
 docker, cri-o, containerd та інші.
 
 // TODO
+
 ```
 kubectl get --raw /api/v1/nodes/nuc-1/proxy/metrics/cadvisor | grep -i container_last_seen | grep "nginx"
 
@@ -41,6 +47,7 @@ container_last_seen{container="nginx",id="/kubepods/besteffort/pod2712445f-3f3f-
 ```
 
 ## Пошуки причин
+
 // TODO
 
 Скачати репозиторій з маніфестами.
@@ -51,7 +58,7 @@ container_last_seen{container="nginx",id="/kubepods/besteffort/pod2712445f-3f3f-
 але не знаходить сокет:
 ![Registration of the containerd container factory failed](/assets/2024-06-25-install-cadvisor-on-microk8s/containerd_factory_failed.png)
 
-Імовірно через те, що MicroK8s встановлений через snap-менеджер, сокет 
+Імовірно через те, що MicroK8s встановлений через snap-менеджер, сокет
 має нестандартне розміщення (`/var/snap/microk8s/common/run/containerd.sock`).
 Імовірно, розташування змінили, щоб `containerd`, встановлений через `snap`, не конфліктував
 з `containerd`, який може бути встановлений безпосередньо на хост.
@@ -65,16 +72,18 @@ container_last_seen{container="nginx",id="/kubepods/besteffort/pod2712445f-3f3f-
 
 А репозиторій cAdvisor містить маніфести і [приклади кастомізацій](https://github.com/google/cadvisor/tree/master/deploy/kubernetes/overlays/examples).
 На основі цих прикладів я створив власну кастомізацію, в яку і додав необхідні зміни, а саме:
+
 - додав аргумент `--containerd=/var/snap-run/containerd.sock`;
 - примонтував директорію `/var/snap/microk8s/common/run` у контейнер як `/var/snap-run`.
 
-
 ## Після фікса
+
 // TODO
 
 ![Registration successful](/assets/2024-06-25-install-cadvisor-on-microk8s/containerd_factory_registered.png)
 
 http://127.0.0.1:8080/metrics
+
 ```
 container_last_seen{container_label_io_kubernetes_container_name="nginx",container_label_io_kubernetes_pod_name="loki-gateway-66c8f46897-2m445",container_label_io_kubernetes_pod_namespace="default",id="/kubepods/besteffort/pod2712445f-3f3f-4617-8488-48cc3b7e14d4/d52592cd61d1d3eb0950527c0e9bc3108d50167674a39d1150487171bd743132",image="docker.io/nginxinc/nginx-unprivileged:1.24-alpine",name="d52592cd61d1d3eb0950527c0e9bc3108d50167674a39d1150487171bd743132"}
 ```
@@ -85,9 +94,10 @@ kubectl get --raw /api/v1/nodes/nuc-1/proxy/metrics/cadvisor | grep -i container
 container_last_seen{container="nginx",id="/kubepods/besteffort/pod2712445f-3f3f-4617-8488-48cc3b7e14d4/d52592cd61d1d3eb0950527c0e9bc3108d50167674a39d1150487171bd743132",image="docker.io/nginxinc/nginx-unprivileged:1.24-alpine",name="d52592cd61d1d3eb0950527c0e9bc3108d50167674a39d1150487171bd743132",namespace="default",pod="loki-gateway-66c8f46897-2m445"} 1.719320893e+09 1719320893634
 ```
 
-
 ## Kustomization
+
 `deploy/kubernetes/overlays/my-patches/cadvisor-args.yaml`:
+
 ```yaml
 apiVersion: apps/v1 # for Kubernetes versions before 1.9.0 use apps/v1beta2
 kind: DaemonSet
@@ -113,6 +123,7 @@ spec:
 ```
 
 `deploy/kubernetes/overlays/my-patches/daemonset.yaml`:
+
 ```yaml
 apiVersion: apps/v1 # for Kubernetes versions before 1.9.0 use apps/v1beta2
 kind: DaemonSet
@@ -136,24 +147,24 @@ spec:
 ```
 
 deploy/kubernetes/overlays/my-patches/kustomization.yaml:
+
 ```yaml
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-- ../../base
+  - ../../base
 patches:
-- path: cadvisor-args.yaml
+  - path: cadvisor-args.yaml
 ```
 
 Щоб згенерувати і одразу застосувати до кластеру:
+
 ```shell
 kustomize build ./deploy/kubernetes/overlays/my-patches/ | kubectl apply -f -
 ```
 
-
-
-
 ## `cadvisor`
+
 ```
 $ kubectl exec cadvisor-zphg8 -n cadvisor -- cadvisor --version
 cAdvisor version v0.49.1 (6f3f25ba)
