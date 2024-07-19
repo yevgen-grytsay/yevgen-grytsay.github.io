@@ -59,7 +59,7 @@
             font-style: normal;
         }
         h4 {
-            border-bottom: 2px solid #ff5252;
+            border-bottom: 2px solid #67b3b3;
             margin-bottom: 1.5rem;
         }
         dl.list-like dt {
@@ -93,7 +93,7 @@
         }
         .job-item {
             padding-left: 10px;
-            border-bottom: 2px solid #dedede;
+            border-bottom: 2px dotted #67b3b3;
         }
         .job-item:last-child {
             border-bottom-width: 0;
@@ -135,6 +135,42 @@
         .tech-list h5 {
             margin: 1rem 0 0.2rem;
             font-size: 22px;
+        }
+        .tech-list ul.main-list {
+            list-style: disc;
+            padding: 0 0 0 20px;
+        }
+        .tech-list ul.main-list li {
+            font-weight: bold;
+            padding: 0 10px 0 0px;
+
+            border-radius: 6px;
+            /* border-color: #fdfdfd; */
+            /* box-shadow: 2px 2px #67b3b3; */
+            /* background-color: #67b3b3; */
+            /* text-align: center; */
+            font-size: 1.6em;
+            font-family: monospace;
+        }
+        .tech-item {
+            padding: .4rem .4rem;
+            border-radius: 6px;
+            /* background-color: #fbefff; */
+            /* background-color: #fff0f0; */
+            background-color: #fdfdfd;
+            border-color: #67b3b3;
+            /* border-color: #ffd6d6; */
+            font-size: 85%;
+            line-height: 2.4em;
+            box-shadow: 2px 2px rgba(0, 128, 128, 0.596);
+        }
+        .extra {
+            padding: 0 0 0 10px;
+            border-left: 5px solid #f3f3f3;
+        }
+        .extra .header {
+            font-weight: bold;
+            /* font-size: 1.1em; */
         }
     </style>
 </head>
@@ -261,17 +297,38 @@
             <h4>Технології</h4>
             <section class="tech-list">
                 <article>
-                    <p class="lead"><strong>PHP (7, 8), JavaScript, MySQL</strong></p>
-                    
                     <section>
-                        <h5>DevOps</h3>
-                        <p>Останнім часов цікавлюсь практиками та інструментами DevOps, зокрема <strong>Kubernetes</strong> та <strong>GitOps</strong>.</p>
-                        <p>Закінчив курс "DevOps та Kubernetes. Практичний інтенсив" на платформі prometheus.org.ua.</p>
+                        <ul class="main-list">
+                            <li>PHP</li>
+                            <li>JavaScript</li>
+                            <li>MySQL</li>
+                        </ul>
                     </section>
                     
-                    <section>
-                        <h5>Інше</h3>
-                        <p>Також маю певний досвід роботи з Vue 2, Yii2, PHPUnit, Codeception, Java, Python, Docker&nbsp;Compose, AppStore In-App Purchases.</p>
+                    <section class="extra">
+                        <p class="header">Також працював із:</p>
+                        <p>
+                            <code class="tech-item">Vue 2</code>
+                            <code class="tech-item">Yii2</code>
+                            <code class="tech-item">Laravel</code>
+                            <code class="tech-item">PHPUnit</code>
+                            <code class="tech-item">Codeception</code>
+                            <code class="tech-item">Java</code>
+                            <code class="tech-item">Python</code>
+                            <code class="tech-item">Docker</code>
+                            <code class="tech-item">AppStore In-App Purchases</code>
+                        </p>
+                    </section>
+                    
+                    <section class="extra">
+                        <p class="header">Цікавлюсь практиками та інструментами DevOps</p>
+                        <p>
+                            <code class="tech-item">CI/CD</code>
+                            <code class="tech-item">GitOps</code>
+                            <code class="tech-item">Kubernetes</code>
+                            <code class="tech-item">Flux</code>
+                        </p>
+                        <!-- <p>Закінчив курс "DevOps та Kubernetes. Практичний інтенсив" на платформі prometheus.org.ua.</p> -->
                     </section>
                 </article>
             </section>
