@@ -14,6 +14,10 @@
 - [stitcher.io](https://stitcher.io/)
 - [Awesome PHP](https://github.com/ziadoz/awesome-php)
 
+## Web Development
+- [web.dev](https://web.dev/)
+- [Web Vitals](https://web.dev/articles/vitals)
+
 ## Administration
 
 - [Nginx Admin's Handbook](https://github.com/trimstray/nginx-admins-handbook)
